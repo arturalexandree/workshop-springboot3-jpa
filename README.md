@@ -1,7 +1,4 @@
 
-Com base no arquivo pom.xml que você forneceu, aqui está um rascunho do README para o seu projeto Spring Boot "course":
-
-# Projeto Course
 
 Descrição
 Este projeto é uma demonstração de um aplicativo Spring Boot simples. Inicialmente, ele inclui funcionalidades básicas de desenvolvimento web e a possibilidade de se conectar a um banco de dados usando JPA.
