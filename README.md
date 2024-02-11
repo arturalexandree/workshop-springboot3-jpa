@@ -31,3 +31,36 @@ Este projeto usa as seguintes dependências:
 * `spring-boot-starter-data-jpa`: Permite acesso a dados JPA.
 * `spring-boot-starter-test`: Fornece ferramentas para testes unitários e de integração.
 
+  ## Exemplos de Uso
+
+### Cadastro de Usuário
+
+#### POST /users
+
+Este exemplo demonstra como cadastrar um novo usuário enviando um objeto JSON no corpo da solicitação.
+
+**Solicitação:**
+```http
+POST /users HTTP/1.1
+Host: example.com
+Content-Type: application/json
+
+{
+  "name": "Bob Brown",
+  "email": "bob@gmail.com",
+  "phone": "977557755",
+  "password": "123456"
+}
+```
+**Resposta:**
+```http
+HTTP/1.1 201 Created
+Location: /users/1
+Content-Type: application/json
+
+{
+"id": 1,
+"name": "Bob Brown",
+"email": "bob@gmail.com",
+"phone": "977557755"
+}
