@@ -64,3 +64,34 @@ Content-Type: application/json
 "email": "bob@gmail.com",
 "phone": "977557755"
 }
+```
+## Recuperação de Todos os Usuários
+
+Este exemplo demonstra como recuperar todos os usuários cadastrados.
+
+**Solicitação:**
+```http
+GET /users HTTP/1.1
+Host: example.com
+```
+**Resposta:**
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+  {
+    "id": 1,
+    "name": "Bob Brown",
+    "email": "bob@gmail.com",
+    "phone": "977557755"
+  },
+  {
+    "id": 2,
+    "name": "Alice Johnson",
+    "email": "alice@gmail.com",
+    "phone": "988889999"
+  }
+]
+
+
