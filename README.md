@@ -31,7 +31,7 @@ Este projeto usa as seguintes dependências:
 * `spring-boot-starter-data-jpa`: Permite acesso a dados JPA.
 * `spring-boot-starter-test`: Fornece ferramentas para testes unitários e de integração.
 
-  ## Exemplos de Uso
+ ## Exemplos de Uso
 
 ### Cadastro de Usuário
 
@@ -93,5 +93,67 @@ Content-Type: application/json
     "phone": "988889999"
   }
 ]
+```
+## Recuperação de um Usuário por ID
+
+Este exemplo demonstra como recuperar um usuário específico pelo seu ID.
+
+**Solicitação:**
+```http
+GET /users/1 HTTP/1.1
+Host: example.com
+```
+**Resposta:**
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Bob Brown",
+  "email": "bob@gmail.com",
+  "phone": "977557755"
+}
+```
+## Atualização de um Usuário por ID
+
+Este exemplo demonstra como atualizar um usuário existente pelo seu ID.
+
+**Solicitação:**
+```http
+PUT /users/1 HTTP/1.1
+Host: example.com
+Content-Type: application/json
+
+{
+  "name": "Novo Nome",
+  "email": "novoemail@gmail.com",
+  "phone": "999999999"
+}
+```
+**Resposta:**
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Novo Nome",
+  "email": "novoemail@gmail.com",
+  "phone": "999999999"
+}
+```
+## Exclusão de um Usuário por ID
+
+Este exemplo demonstra como excluir um usuário existente pelo seu ID.
+
+**Solicitação:**
+```http
+DELETE /users/1 HTTP/1.1
+Host: example.com
+```
+**Resposta:**
+```http
+HTTP/1.1 204 No Content
 
 
