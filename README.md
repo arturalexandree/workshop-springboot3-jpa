@@ -22,6 +22,18 @@ Este projeto é uma demonstração de um aplicativo Spring Boot simples. Inicial
 2. Execute `mvn spring-boot:run` para iniciar a aplicação.
 3. Acesse a aplicação em http://localhost:8080 (ou a porta especificada).
 
+## Banco de Dados H2
+
+Durante a execução do projeto, você pode acessar o console do banco de dados H2 em [http://localhost:8080/h2-console](http://localhost:8080/h2-console).
+As configurações do banco de dados H2 são as seguintes:
+
+```properties
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.username=sa
+spring.datasource.password=
+```
+
 ## Depêndências
 
 Este projeto usa as seguintes dependências:
